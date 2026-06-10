@@ -160,6 +160,10 @@ io.on('connection', (socket) => {
 		socket.to(lobby).emit("destroy",name,socket.id)
     });
 	
+	socket.on("teleport",function(lobby){
+		socket.to(lobby).emit("teleport",socket.id)
+    });
+	
 	/*
 	socket.on("sendCool",function(id){
 		socket.to(id).emit("cool",socket.id);
