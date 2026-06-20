@@ -107,8 +107,8 @@ io.on('connection', (socket) => {
 		socket.to(lobby).emit("view",view,socket.id)
     });
 	
-	socket.on("activate",function(lobby,id,cpt){
-		socket.to(lobby).emit("activate",id,cpt,socket.id)
+	socket.on("activate",function(lobby,id,cpt,senderId){
+		socket.to(lobby).emit("activate",id,cpt,senderId)
     });
 	
 	
